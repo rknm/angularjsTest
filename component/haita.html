@@ -1,0 +1,31 @@
+<div>
+    <!-- <input type="radio" ng-model="color" value="red">  Red 
+    <input type="radio" ng-model="color" value="blue">  blue 
+    <input type="radio" ng-model="color" value="yellow">  yello 
+    <input type="radio" ng-model="color" value="purple">  pupp  -->
+    <label ng-repeat="color in colors" for="{{color.name}}">
+        <input type="radio"
+               ng-model="main.color"
+               ng-value="color.value"
+               ng-click="clearAll()">
+               {{color.name}}
+            </label>
+    <br>
+    <label ng-repeat="animal in animals" for="{{animal.name}}">
+        <input type="radio"
+               ng-model="main.animal"
+               ng-value="animal.value"
+               ng-disabled="animal.isDisable(main.color)">
+               {{animal.name}}
+            </label>
+    <br>
+    <input type="text" ng-model="t" >
+    <select ng-model="main.sel1" ng-options="sel for sel in s1List">
+        <options value=""></options>
+    </select>
+    <select ng-model="main.sel2" ng-options="sel for sel in s2List">
+        <options value=""></options></select>
+    
+    <!-- <input id="name" name="name" type="text" ng-model="color" /> -->
+    <div>{{"こんにちは、" + main.color + " " + main.animal + " "+ main.sel2 +"さん！"}}</div>
+</div>
