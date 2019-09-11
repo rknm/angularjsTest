@@ -3,9 +3,18 @@ const app = angular.module("app", []);
 class MyAppCtrl {
 }
 
+class CSVCtrl {
+
+}
+
 app.component("myApp", {
   template: `<haita name="'World'"></haita>`,
   controller: MyAppCtrl
+});
+
+app.component("csvRead", {
+  template: `<csv></csv>`,
+  controller: CSVCtrl
 });
 
 app.component("haita", {
@@ -96,6 +105,21 @@ app.component("haita", {
       } else {
         return true;
       }
+    }
+  }
+});
+
+app.component("csvDialog", {
+  templateUrl: './component/csv.html',
+  controller: function($scope) {
+    $scope.list1 = [1,2,3,4];
+    $scope.list2 = [5,6,7];
+    $scope.main = {
+      item1: "",
+      item2: "",
+      item3: "",
+      item4: "",
+      item5: ""
     }
   }
 });

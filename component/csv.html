@@ -1,0 +1,15 @@
+<select ng-model="main.item1" ng-options="sel for sel in list1">
+    <options value=""></options>
+</select>
+<br>
+<input type="text" ng-model="main.item2" >
+<br>
+<input type="text" ng-model="main.item3" >
+<br>
+<select ng-model="main.item4" ng-options="sel for sel in list2">
+    <options value=""></options>
+</select>
+<br>
+<input type="text" ng-model="main.item5" >
+<br>
+<div>{{"こんにちは、" + main.item1 + " " + main.item2 + " " + main.item3 +  " " + main.item4 + " " + main.item5 +"さん！"}}</div>
