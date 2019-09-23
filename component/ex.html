@@ -1,0 +1,40 @@
+<div ng-repeat="r in rList">
+    <div>{{r.name}}
+        <div>
+            {{r.execState.mess}}
+        </div>
+        <i class="fas {{r.execState.icon}}"></i>
+        <!-- <div ng-switch on="checkExecState(r)">
+            <div ng-switch-when="complete">
+                実行完了
+            </div>
+            <div ng-switch-when="warning">
+                警告あり
+            </div>
+            <div ng-switch-when="error">
+                エラーあり
+            </div>
+            <div ng-switch-when="noResult">
+                実行済。該当無し。
+            </div>
+        </div> -->
+        <!-- <div ng-if="r.queryResult.result !== null && r.queryResult.result.length !== 0">
+            実行完了
+        </div>
+        <div ng-if="r.queryResult.result !== null && r.queryResult.result.length === 0">
+            <div ng-if="r.queryResult.warnings.length !== 0">
+                警告あり
+            </div>
+            <div ng-if="r.queryResult.error !== null">
+                エラーあり
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div ng-if="r.queryResult.error === null && r.queryResult.warnings.length === 0">
+                実行済。該当無し。
+            </div>
+        </div> -->
+    </div>
+    <!-- <label ng-repeat="r in rList" for="{{r.name}}"></label> -->
+    <br>
+</div>
+<input type="button" value="exec" ng-click="onClick()">
